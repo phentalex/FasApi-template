@@ -2,6 +2,7 @@ from typing import Annotated, List
 
 # import pandas as pd
 import uvicorn
+import re
 import json, csv, os
 import httpx, requests
 from pydantic import BaseModel
@@ -60,6 +61,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JSON_SAVE_PATH = os.path.join(BASE_DIR, 'JSONsaves')
 CSV_SAVE_PATH = os.path.join(BASE_DIR, 'CSVsaves')
 
+class WorkRequest(BaseModel):
+    work_ids: list[str]
+
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "work_ids": ["W2117692326", "W1234567890", "W0987654321"]
+            }
+        }
+
 def save_to_json(data, work_id):
     if not os.path.exists(JSON_SAVE_PATH):
         os.makedirs(JSON_SAVE_PATH)
@@ -91,43 +102,88 @@ def append_to_csv(data, work_id):
 
 async def fetch_json(url: str):
     async with httpx.AsyncClient() as client:
-        response = await client.get(url)
-        response.raise_for_status()
-        return response.json()
+        response = await client.get(url, timeout=20)
+        if response.status_code == 200:
+            return response.json()
+        else:
+            response.raise_for_status()
 
-@app.get("/get-work/{id}")
-async def get_work(id: str):
+def remove_latex_expressions(text):
+    latex_pattern = r'\$'
+    cleaned_text = re.sub(latex_pattern, '', text)
+
+    return cleaned_text
+
+async def get_abstract_text(abstract_inverted_index: dict) -> str:
+    word_index = []
+    
+    for word, indices in abstract_inverted_index.items():
+        for index in indices:
+            word_index.append((word, index))
+    
+    word_index = sorted(word_index, key=lambda x: x[1])
+    abstract = ' '.join([word for word, _ in word_index])
+    cleaned_abstract = remove_latex_expressions(abstract)
+    
+    return cleaned_abstract
+
+@app.get("/get_work_abstract/{id}")
+async def get_work_abstract(id: str):
     id = id.upper() if id.lower().startswith("w") else f"W{id}"
-    
     full_id = f"{OPENALEX_API_URL}/works/{id}"
-    
+
     try:
         data = await fetch_json(full_id)
         
-        work_data = {
-            "id": data.get("id"),
-            "primary_location": data.get("primary_location"),
-            "type": data.get("type"),
-            "publication_year": data.get("publication_year"),
-            "concepts": data.get("concepts"),
-            "authorships": data.get("authorships"),
-            "best_oa_location": data.get("best_oa_location"),
-            "cited_by_count": data.get("cited_by_count"),
-            "doi": data.get("doi"),
-            "locations": data.get("locations"),
-            "Keywords": data.get("keywords"),
-            "title": data.get("display_name")
-        }
-        
-        save_to_json(work_data, id)
-        append_to_csv(work_data, id)
-        
-        return work_data
+        if 'abstract_inverted_index' in data:
+            abstract_inverted_index = data['abstract_inverted_index']
+            abstract_text = await get_abstract_text(abstract_inverted_index)
+            return {"abstract": abstract_text}
+        else:
+            return {"error": "Abstract not found for this work"}
     
     except httpx.HTTPStatusError as exc:
-        return {"error": "OpenAlex API error", "status_code": exc.response.status_code, "detail": exc.response.text}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+        raise HTTPException(status_code=exc.response.status_code, detail="Error fetching data from OpenAlex")
+
+@app.post("/get_works/")
+async def get_works(body: Annotated[WorkRequest, Body(
+        example={"work_ids": ["W2117692326", "W2502170112", "W0987654321"]}
+    )]):
+    results = []
+    for id in body.work_ids:
+        id = id.upper() if id.lower().startswith("w") else f"W{id}"
+        
+        full_id = f"{OPENALEX_API_URL}/works/{id}"
+        
+        try:
+            data = await fetch_json(full_id)
+            
+            work_data = {
+                "id": data.get("id"),
+                "primary_location": data.get("primary_location"),
+                "type": data.get("type"),
+                "publication_year": data.get("publication_year"),
+                "concepts": data.get("concepts"),
+                "authorships": data.get("authorships"),
+                "best_oa_location": data.get("best_oa_location"),
+                "cited_by_count": data.get("cited_by_count"),
+                "doi": data.get("doi"),
+                "locations": data.get("locations"),
+                "Keywords": data.get("keywords"),
+                "title": data.get("display_name")
+            }
+            
+            save_to_json(work_data, id)
+            append_to_csv(work_data, id)
+            
+            results.append(work_data)
+        
+        except httpx.HTTPStatusError as exc:
+            results.append({"error": "OpenAlex API error", "status_code": exc.response.status_code, "detail": exc.response.text})
+        except Exception as e:
+            results.append({"error": f"Internal server error: {str(e)}"})
+
+    return results
 
 @app.get("/")
 async def read_root():
