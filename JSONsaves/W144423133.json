@@ -1,0 +1,308 @@
+{
+    "id": "https://openalex.org/W144423133",
+    "primary_location": {
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1016/s0092-8674(04)00045-5",
+        "pdf_url": "http://www.cell.com/article/S0092867404000455/pdf",
+        "source": {
+            "id": "https://openalex.org/S110447773",
+            "display_name": "Cell",
+            "issn_l": "0092-8674",
+            "issn": [
+                "0092-8674",
+                "1097-4172"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310315673",
+            "host_organization_name": "Cell Press",
+            "host_organization_lineage": [
+                "https://openalex.org/P4310320990",
+                "https://openalex.org/P4310315673"
+            ],
+            "host_organization_lineage_names": [
+                "Elsevier BV",
+                "Cell Press"
+            ],
+            "type": "journal"
+        },
+        "license": "publisher-specific-oa",
+        "license_id": "https://openalex.org/licenses/publisher-specific-oa",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true
+    },
+    "type": "review",
+    "publication_year": 2004,
+    "concepts": [
+        {
+            "id": "https://openalex.org/C86803240",
+            "wikidata": "https://www.wikidata.org/wiki/Q420",
+            "display_name": "Biology",
+            "level": 0,
+            "score": 0.9512589
+        },
+        {
+            "id": "https://openalex.org/C145059251",
+            "wikidata": "https://www.wikidata.org/wiki/Q310899",
+            "display_name": "microRNA",
+            "level": 3,
+            "score": 0.81262505
+        },
+        {
+            "id": "https://openalex.org/C74318829",
+            "wikidata": "https://www.wikidata.org/wiki/Q36458",
+            "display_name": "Multicellular organism",
+            "level": 3,
+            "score": 0.70356196
+        },
+        {
+            "id": "https://openalex.org/C104317684",
+            "wikidata": "https://www.wikidata.org/wiki/Q7187",
+            "display_name": "Gene",
+            "level": 2,
+            "score": 0.60286075
+        },
+        {
+            "id": "https://openalex.org/C54355233",
+            "wikidata": "https://www.wikidata.org/wiki/Q7162",
+            "display_name": "Genetics",
+            "level": 1,
+            "score": 0.5095456
+        },
+        {
+            "id": "https://openalex.org/C165864922",
+            "wikidata": "https://www.wikidata.org/wiki/Q411391",
+            "display_name": "Regulation of gene expression",
+            "level": 3,
+            "score": 0.4899227
+        },
+        {
+            "id": "https://openalex.org/C186310378",
+            "wikidata": "https://www.wikidata.org/wiki/Q941796",
+            "display_name": "Psychological repression",
+            "level": 4,
+            "score": 0.48354077
+        },
+        {
+            "id": "https://openalex.org/C95444343",
+            "wikidata": "https://www.wikidata.org/wiki/Q7141",
+            "display_name": "Cell biology",
+            "level": 1,
+            "score": 0.44930062
+        },
+        {
+            "id": "https://openalex.org/C201853390",
+            "wikidata": "https://www.wikidata.org/wiki/Q413236",
+            "display_name": "Argonaute",
+            "level": 5,
+            "score": 0.44576254
+        },
+        {
+            "id": "https://openalex.org/C70721500",
+            "wikidata": "https://www.wikidata.org/wiki/Q177005",
+            "display_name": "Computational biology",
+            "level": 1,
+            "score": 0.42284697
+        },
+        {
+            "id": "https://openalex.org/C67705224",
+            "wikidata": "https://www.wikidata.org/wiki/Q11053",
+            "display_name": "RNA",
+            "level": 3,
+            "score": 0.3734386
+        },
+        {
+            "id": "https://openalex.org/C150194340",
+            "wikidata": "https://www.wikidata.org/wiki/Q26972",
+            "display_name": "Gene expression",
+            "level": 3,
+            "score": 0.3582623
+        },
+        {
+            "id": "https://openalex.org/C166703698",
+            "wikidata": "https://www.wikidata.org/wiki/Q201993",
+            "display_name": "RNA interference",
+            "level": 4,
+            "score": 0.35701808
+        }
+    ],
+    "authorships": [
+        {
+            "author_position": "first",
+            "author": {
+                "id": "https://openalex.org/A5087589263",
+                "display_name": "David P. Bartel",
+                "orcid": "https://orcid.org/0000-0002-3872-2856"
+            },
+            "institutions": [
+                {
+                    "id": "https://openalex.org/I4210157710",
+                    "display_name": "Whitehead Institute for Biomedical Research",
+                    "ror": "https://ror.org/04vqm6w82",
+                    "country_code": "US",
+                    "type": "facility",
+                    "lineage": [
+                        "https://openalex.org/I4210157710",
+                        "https://openalex.org/I63966007"
+                    ]
+                },
+                {
+                    "id": "https://openalex.org/I63966007",
+                    "display_name": "Massachusetts Institute of Technology",
+                    "ror": "https://ror.org/042nb2s44",
+                    "country_code": "US",
+                    "type": "education",
+                    "lineage": [
+                        "https://openalex.org/I63966007"
+                    ]
+                }
+            ],
+            "countries": [
+                "US"
+            ],
+            "is_corresponding": true,
+            "raw_author_name": "David P Bartel",
+            "raw_affiliation_strings": [
+                "Department of Biology, Massachusetts Institute of Technology, Cambridge, MA 02139 USA",
+                "Whitehead Institute for Biomedical Research, 9 Cambridge Center, Cambridge, MA 02142 USA"
+            ],
+            "affiliations": [
+                {
+                    "raw_affiliation_string": "Whitehead Institute for Biomedical Research, 9 Cambridge Center, Cambridge, MA 02142 USA",
+                    "institution_ids": [
+                        "https://openalex.org/I4210157710"
+                    ]
+                },
+                {
+                    "raw_affiliation_string": "Department of Biology, Massachusetts Institute of Technology, Cambridge, MA 02139 USA",
+                    "institution_ids": [
+                        "https://openalex.org/I63966007"
+                    ]
+                }
+            ]
+        }
+    ],
+    "best_oa_location": {
+        "is_oa": true,
+        "landing_page_url": "https://doi.org/10.1016/s0092-8674(04)00045-5",
+        "pdf_url": "http://www.cell.com/article/S0092867404000455/pdf",
+        "source": {
+            "id": "https://openalex.org/S110447773",
+            "display_name": "Cell",
+            "issn_l": "0092-8674",
+            "issn": [
+                "0092-8674",
+                "1097-4172"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310315673",
+            "host_organization_name": "Cell Press",
+            "host_organization_lineage": [
+                "https://openalex.org/P4310320990",
+                "https://openalex.org/P4310315673"
+            ],
+            "host_organization_lineage_names": [
+                "Elsevier BV",
+                "Cell Press"
+            ],
+            "type": "journal"
+        },
+        "license": "publisher-specific-oa",
+        "license_id": "https://openalex.org/licenses/publisher-specific-oa",
+        "version": "publishedVersion",
+        "is_accepted": true,
+        "is_published": true
+    },
+    "cited_by_count": 32891,
+    "doi": "https://doi.org/10.1016/s0092-8674(04)00045-5",
+    "locations": [
+        {
+            "is_oa": true,
+            "landing_page_url": "https://doi.org/10.1016/s0092-8674(04)00045-5",
+            "pdf_url": "http://www.cell.com/article/S0092867404000455/pdf",
+            "source": {
+                "id": "https://openalex.org/S110447773",
+                "display_name": "Cell",
+                "issn_l": "0092-8674",
+                "issn": [
+                    "0092-8674",
+                    "1097-4172"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310315673",
+                "host_organization_name": "Cell Press",
+                "host_organization_lineage": [
+                    "https://openalex.org/P4310320990",
+                    "https://openalex.org/P4310315673"
+                ],
+                "host_organization_lineage_names": [
+                    "Elsevier BV",
+                    "Cell Press"
+                ],
+                "type": "journal"
+            },
+            "license": "publisher-specific-oa",
+            "license_id": "https://openalex.org/licenses/publisher-specific-oa",
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true
+        },
+        {
+            "is_oa": false,
+            "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/14744438",
+            "pdf_url": null,
+            "source": {
+                "id": "https://openalex.org/S4306525036",
+                "display_name": "PubMed",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1299303238",
+                "host_organization_name": "National Institutes of Health",
+                "host_organization_lineage": [
+                    "https://openalex.org/I1299303238"
+                ],
+                "host_organization_lineage_names": [
+                    "National Institutes of Health"
+                ],
+                "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": null,
+            "is_accepted": false,
+            "is_published": false
+        }
+    ],
+    "Keywords": [
+        {
+            "id": "https://openalex.org/keywords/multicellular-organism",
+            "display_name": "Multicellular organism",
+            "score": 0.70356196
+        },
+        {
+            "id": "https://openalex.org/keywords/micrornas",
+            "display_name": "MicroRNAs",
+            "score": 0.588689
+        },
+        {
+            "id": "https://openalex.org/keywords/small-rnas",
+            "display_name": "Small RNAs",
+            "score": 0.564142
+        },
+        {
+            "id": "https://openalex.org/keywords/argonaute",
+            "display_name": "Argonaute",
+            "score": 0.44576254
+        }
+    ],
+    "title": "MicroRNAs"
+}
