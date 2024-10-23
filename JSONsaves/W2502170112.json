@@ -1,0 +1,532 @@
+{
+    "id": "https://openalex.org/W2502170112",
+    "primary_location": {
+        "is_oa": false,
+        "landing_page_url": "https://doi.org/10.1103/physrevb.95.035104",
+        "pdf_url": null,
+        "source": {
+            "id": "https://openalex.org/S4210237713",
+            "display_name": "Physical review. B./Physical review. B",
+            "issn_l": "2469-9950",
+            "issn": [
+                "2469-9950",
+                "2469-9969",
+                "2469-9977"
+            ],
+            "is_oa": false,
+            "is_in_doaj": false,
+            "is_core": true,
+            "host_organization": "https://openalex.org/P4310320261",
+            "host_organization_name": "American Physical Society",
+            "host_organization_lineage": [
+                "https://openalex.org/P4310320261"
+            ],
+            "host_organization_lineage_names": [
+                "American Physical Society"
+            ],
+            "type": "journal"
+        },
+        "license": null,
+        "license_id": null,
+        "version": null,
+        "is_accepted": false,
+        "is_published": false
+    },
+    "type": "article",
+    "publication_year": 2017,
+    "concepts": [
+        {
+            "id": "https://openalex.org/C110367647",
+            "wikidata": "https://www.wikidata.org/wiki/Q497166",
+            "display_name": "Metamaterial",
+            "level": 2,
+            "score": 0.6928963
+        },
+        {
+            "id": "https://openalex.org/C39984356",
+            "wikidata": "https://www.wikidata.org/wiki/Q2121987",
+            "display_name": "Quadrupole",
+            "level": 2,
+            "score": 0.63015723
+        },
+        {
+            "id": "https://openalex.org/C121332964",
+            "wikidata": "https://www.wikidata.org/wiki/Q413",
+            "display_name": "Physics",
+            "level": 0,
+            "score": 0.5908673
+        },
+        {
+            "id": "https://openalex.org/C83581075",
+            "wikidata": "https://www.wikidata.org/wiki/Q1361503",
+            "display_name": "Excitation",
+            "level": 2,
+            "score": 0.5796233
+        },
+        {
+            "id": "https://openalex.org/C173523689",
+            "wikidata": "https://www.wikidata.org/wiki/Q215589",
+            "display_name": "Dipole",
+            "level": 2,
+            "score": 0.5578213
+        },
+        {
+            "id": "https://openalex.org/C139210041",
+            "wikidata": "https://www.wikidata.org/wiki/Q2145840",
+            "display_name": "Resonance (particle physics)",
+            "level": 2,
+            "score": 0.48722854
+        },
+        {
+            "id": "https://openalex.org/C169852918",
+            "wikidata": "https://www.wikidata.org/wiki/Q390314",
+            "display_name": "Magnetic dipole",
+            "level": 3,
+            "score": 0.4474254
+        },
+        {
+            "id": "https://openalex.org/C109792285",
+            "wikidata": "https://www.wikidata.org/wiki/Q174789",
+            "display_name": "Millimeter",
+            "level": 2,
+            "score": 0.44489825
+        },
+        {
+            "id": "https://openalex.org/C187725362",
+            "wikidata": "https://www.wikidata.org/wiki/Q830521",
+            "display_name": "Q factor",
+            "level": 3,
+            "score": 0.41695732
+        },
+        {
+            "id": "https://openalex.org/C184779094",
+            "wikidata": "https://www.wikidata.org/wiki/Q26383",
+            "display_name": "Atomic physics",
+            "level": 1,
+            "score": 0.3564471
+        },
+        {
+            "id": "https://openalex.org/C30475298",
+            "wikidata": "https://www.wikidata.org/wiki/Q909554",
+            "display_name": "Computational physics",
+            "level": 1,
+            "score": 0.33228546
+        },
+        {
+            "id": "https://openalex.org/C120665830",
+            "wikidata": "https://www.wikidata.org/wiki/Q14620",
+            "display_name": "Optics",
+            "level": 1,
+            "score": 0.28355658
+        },
+        {
+            "id": "https://openalex.org/C62520636",
+            "wikidata": "https://www.wikidata.org/wiki/Q944",
+            "display_name": "Quantum mechanics",
+            "level": 1,
+            "score": 0.17714429
+        },
+        {
+            "id": "https://openalex.org/C97126364",
+            "wikidata": "https://www.wikidata.org/wiki/Q349669",
+            "display_name": "Resonator",
+            "level": 2,
+            "score": 0.0829266
+        }
+    ],
+    "authorships": [
+        {
+            "author_position": "first",
+            "author": {
+                "id": "https://openalex.org/A5052909470",
+                "display_name": "Alexey A. Basharin",
+                "orcid": "https://orcid.org/0000-0003-0851-5642"
+            },
+            "institutions": [
+                {
+                    "id": "https://openalex.org/I12003341",
+                    "display_name": "National University of Science and Technology",
+                    "ror": "https://ror.org/019vsm959",
+                    "country_code": "RU",
+                    "type": "education",
+                    "lineage": [
+                        "https://openalex.org/I12003341"
+                    ]
+                }
+            ],
+            "countries": [
+                "RU"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Alexey A. Basharin",
+            "raw_affiliation_strings": [
+                "National University of Science and Technology MISiS, Moscow 119049, Russia"
+            ],
+            "affiliations": [
+                {
+                    "raw_affiliation_string": "National University of Science and Technology MISiS, Moscow 119049, Russia",
+                    "institution_ids": [
+                        "https://openalex.org/I12003341"
+                    ]
+                }
+            ]
+        },
+        {
+            "author_position": "middle",
+            "author": {
+                "id": "https://openalex.org/A5079231414",
+                "display_name": "Vitaly Chuguevsky",
+                "orcid": "https://orcid.org/0000-0001-7719-3937"
+            },
+            "institutions": [
+                {
+                    "id": "https://openalex.org/I4210106257",
+                    "display_name": "Voronezh State Technical University",
+                    "ror": "https://ror.org/01m20f643",
+                    "country_code": "RU",
+                    "type": "education",
+                    "lineage": [
+                        "https://openalex.org/I4210106257"
+                    ]
+                },
+                {
+                    "id": "https://openalex.org/I12003341",
+                    "display_name": "National University of Science and Technology",
+                    "ror": "https://ror.org/019vsm959",
+                    "country_code": "RU",
+                    "type": "education",
+                    "lineage": [
+                        "https://openalex.org/I12003341"
+                    ]
+                }
+            ],
+            "countries": [
+                "RU"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Vitaly Chuguevsky",
+            "raw_affiliation_strings": [
+                "National University of Science and Technology MISiS, Moscow 119049, Russia",
+                "Voronezh State Technical University, Voronezh 394026, Russia"
+            ],
+            "affiliations": [
+                {
+                    "raw_affiliation_string": "Voronezh State Technical University, Voronezh 394026, Russia",
+                    "institution_ids": [
+                        "https://openalex.org/I4210106257"
+                    ]
+                },
+                {
+                    "raw_affiliation_string": "National University of Science and Technology MISiS, Moscow 119049, Russia",
+                    "institution_ids": [
+                        "https://openalex.org/I12003341"
+                    ]
+                }
+            ]
+        },
+        {
+            "author_position": "middle",
+            "author": {
+                "id": "https://openalex.org/A5090795726",
+                "display_name": "Nikita Volsky",
+                "orcid": null
+            },
+            "institutions": [
+                {
+                    "id": "https://openalex.org/I12003341",
+                    "display_name": "National University of Science and Technology",
+                    "ror": "https://ror.org/019vsm959",
+                    "country_code": "RU",
+                    "type": "education",
+                    "lineage": [
+                        "https://openalex.org/I12003341"
+                    ]
+                }
+            ],
+            "countries": [
+                "RU"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Nikita Volsky",
+            "raw_affiliation_strings": [
+                "National University of Science and Technology MISiS, Moscow 119049, Russia"
+            ],
+            "affiliations": [
+                {
+                    "raw_affiliation_string": "National University of Science and Technology MISiS, Moscow 119049, Russia",
+                    "institution_ids": [
+                        "https://openalex.org/I12003341"
+                    ]
+                }
+            ]
+        },
+        {
+            "author_position": "middle",
+            "author": {
+                "id": "https://openalex.org/A5043743792",
+                "display_name": "Maria Kafesaki",
+                "orcid": "https://orcid.org/0000-0002-9524-2576"
+            },
+            "institutions": [
+                {
+                    "id": "https://openalex.org/I142617266",
+                    "display_name": "University of Crete",
+                    "ror": "https://ror.org/00dr28g20",
+                    "country_code": "GR",
+                    "type": "education",
+                    "lineage": [
+                        "https://openalex.org/I142617266"
+                    ]
+                },
+                {
+                    "id": "https://openalex.org/I8901234",
+                    "display_name": "Foundation for Research and Technology Hellas",
+                    "ror": "https://ror.org/052rphn09",
+                    "country_code": "GR",
+                    "type": "facility",
+                    "lineage": [
+                        "https://openalex.org/I8901234"
+                    ]
+                }
+            ],
+            "countries": [
+                "GR"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Maria Kafesaki",
+            "raw_affiliation_strings": [
+                "Foundation for Research and Technology Hellas (FORTH), Heraklion, Crete, Greece and University of Crete, Heraklion, Crete, Greece"
+            ],
+            "affiliations": [
+                {
+                    "raw_affiliation_string": "Foundation for Research and Technology Hellas (FORTH), Heraklion, Crete, Greece and University of Crete, Heraklion, Crete, Greece",
+                    "institution_ids": [
+                        "https://openalex.org/I142617266",
+                        "https://openalex.org/I8901234"
+                    ]
+                }
+            ]
+        },
+        {
+            "author_position": "last",
+            "author": {
+                "id": "https://openalex.org/A5083942178",
+                "display_name": "E. N. Economou",
+                "orcid": "https://orcid.org/0000-0002-0561-6977"
+            },
+            "institutions": [
+                {
+                    "id": "https://openalex.org/I8901234",
+                    "display_name": "Foundation for Research and Technology Hellas",
+                    "ror": "https://ror.org/052rphn09",
+                    "country_code": "GR",
+                    "type": "facility",
+                    "lineage": [
+                        "https://openalex.org/I8901234"
+                    ]
+                },
+                {
+                    "id": "https://openalex.org/I142617266",
+                    "display_name": "University of Crete",
+                    "ror": "https://ror.org/00dr28g20",
+                    "country_code": "GR",
+                    "type": "education",
+                    "lineage": [
+                        "https://openalex.org/I142617266"
+                    ]
+                }
+            ],
+            "countries": [
+                "GR"
+            ],
+            "is_corresponding": false,
+            "raw_author_name": "Eleftherios N. Economou",
+            "raw_affiliation_strings": [
+                "Foundation for Research and Technology Hellas (FORTH), Heraklion, Crete, Greece and University of Crete, Heraklion, Crete, Greece"
+            ],
+            "affiliations": [
+                {
+                    "raw_affiliation_string": "Foundation for Research and Technology Hellas (FORTH), Heraklion, Crete, Greece and University of Crete, Heraklion, Crete, Greece",
+                    "institution_ids": [
+                        "https://openalex.org/I8901234",
+                        "https://openalex.org/I142617266"
+                    ]
+                }
+            ]
+        }
+    ],
+    "best_oa_location": {
+        "is_oa": true,
+        "landing_page_url": "https://arxiv.org/abs/1608.03233",
+        "pdf_url": "https://arxiv.org/pdf/1608.03233",
+        "source": {
+            "id": "https://openalex.org/S4306400194",
+            "display_name": "arXiv (Cornell University)",
+            "issn_l": null,
+            "issn": null,
+            "is_oa": true,
+            "is_in_doaj": false,
+            "is_core": false,
+            "host_organization": "https://openalex.org/I205783295",
+            "host_organization_name": "Cornell University",
+            "host_organization_lineage": [
+                "https://openalex.org/I205783295"
+            ],
+            "host_organization_lineage_names": [
+                "Cornell University"
+            ],
+            "type": "repository"
+        },
+        "license": null,
+        "license_id": null,
+        "version": "submittedVersion",
+        "is_accepted": false,
+        "is_published": false
+    },
+    "cited_by_count": 201,
+    "doi": "https://doi.org/10.1103/physrevb.95.035104",
+    "locations": [
+        {
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1103/physrevb.95.035104",
+            "pdf_url": null,
+            "source": {
+                "id": "https://openalex.org/S4210237713",
+                "display_name": "Physical review. B./Physical review. B",
+                "issn_l": "2469-9950",
+                "issn": [
+                    "2469-9950",
+                    "2469-9969",
+                    "2469-9977"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310320261",
+                "host_organization_name": "American Physical Society",
+                "host_organization_lineage": [
+                    "https://openalex.org/P4310320261"
+                ],
+                "host_organization_lineage_names": [
+                    "American Physical Society"
+                ],
+                "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": null,
+            "is_accepted": false,
+            "is_published": false
+        },
+        {
+            "is_oa": true,
+            "landing_page_url": "https://arxiv.org/abs/1608.03233",
+            "pdf_url": "https://arxiv.org/pdf/1608.03233",
+            "source": {
+                "id": "https://openalex.org/S4306400194",
+                "display_name": "arXiv (Cornell University)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I205783295",
+                "host_organization_name": "Cornell University",
+                "host_organization_lineage": [
+                    "https://openalex.org/I205783295"
+                ],
+                "host_organization_lineage_names": [
+                    "Cornell University"
+                ],
+                "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false
+        },
+        {
+            "is_oa": true,
+            "landing_page_url": "http://arxiv.org/abs/1608.03233",
+            "pdf_url": "http://arxiv.org/pdf/1608.03233",
+            "source": {
+                "id": "https://openalex.org/S4306400194",
+                "display_name": "arXiv (Cornell University)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I205783295",
+                "host_organization_name": "Cornell University",
+                "host_organization_lineage": [
+                    "https://openalex.org/I205783295"
+                ],
+                "host_organization_lineage_names": [
+                    "Cornell University"
+                ],
+                "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "submittedVersion",
+            "is_accepted": false,
+            "is_published": false
+        },
+        {
+            "is_oa": false,
+            "landing_page_url": "https://api.datacite.org/dois/10.48550/arxiv.1608.03233",
+            "pdf_url": null,
+            "source": {
+                "id": "https://openalex.org/S4393179698",
+                "display_name": "DataCite API",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I4210145204",
+                "host_organization_name": "DataCite",
+                "host_organization_lineage": [
+                    "https://openalex.org/I4210145204"
+                ],
+                "host_organization_lineage_names": [
+                    "DataCite"
+                ],
+                "type": "metadata"
+            },
+            "license": null,
+            "license_id": null,
+            "version": null
+        }
+    ],
+    "Keywords": [
+        {
+            "id": "https://openalex.org/keywords/terahertz-metamaterials",
+            "display_name": "Terahertz Metamaterials",
+            "score": 0.545812
+        },
+        {
+            "id": "https://openalex.org/keywords/metamaterials",
+            "display_name": "Metamaterials",
+            "score": 0.540243
+        },
+        {
+            "id": "https://openalex.org/keywords/chiral-metamaterials",
+            "display_name": "Chiral Metamaterials",
+            "score": 0.526866
+        },
+        {
+            "id": "https://openalex.org/keywords/dielectric-metasurfaces",
+            "display_name": "Dielectric Metasurfaces",
+            "score": 0.505229
+        },
+        {
+            "id": "https://openalex.org/keywords/q-factor",
+            "display_name": "Q factor",
+            "score": 0.41695732
+        }
+    ],
+    "title": "Extremely high <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"><mml:mi>Q</mml:mi></mml:math> -factor metamaterials due to anapole excitation"
+}
