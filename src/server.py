@@ -13,7 +13,7 @@ from src.models.valid_type_request import HellowRequest, OpenAlexRequest
 from src.utils.greeting import hellow_names
 from src.utils.save_fun import save_to_json, append_to_csv
 from src.utils.api_calls import fetch_json
-from config import JSON_SAVE_PATH, CSV_SAVE_PATH
+from config import JSON_SAVE_PATH, CSV_SAVE_PATH, OPENALEX_API_URL
 
 if public_or_local == 'LOCAL':
     url = 'http://localhost'
@@ -77,12 +77,6 @@ async def inputation(body: Annotated[
             detail="Unknown Error",
             headers={"X-Error": f"{ApplicationError.__repr__()}"},
         )
-
-OPENALEX_API_URL = "https://api.openalex.org"
-
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-JSON_SAVE_PATH = os.path.join(BASE_DIR, 'JSONsaves')
-CSV_SAVE_PATH = os.path.join(BASE_DIR, 'CSVsaves')
 
 class WorkRequest(BaseModel):
     work_ids: list[str]
