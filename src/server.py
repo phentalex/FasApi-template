@@ -190,6 +190,7 @@ async def get_works(body: Annotated[WorkRequest, Body(
                 "title": data.get("display_name")
             }
             
+            
             save_to_json(work_data, id)
             append_to_csv(work_data, id)
             
@@ -200,7 +201,9 @@ async def get_works(body: Annotated[WorkRequest, Body(
         except Exception as e:
             results.append({"error": f"Internal server error: {str(e)}"})
 
+
     return results
+
 
 @app.get("/")
 async def read_root():
