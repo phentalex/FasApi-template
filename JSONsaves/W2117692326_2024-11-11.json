@@ -3,7 +3,7 @@
     "primary_location": {
         "is_oa": true,
         "landing_page_url": "https://doi.org/10.1016/j.cell.2011.02.013",
-        "pdf_url": "http://www.cell.com/article/S0092867411001279/pdf",
+        "pdf_url": null,
         "source": {
             "id": "https://openalex.org/S110447773",
             "display_name": "Cell",
@@ -41,140 +41,35 @@
             "wikidata": "https://www.wikidata.org/wiki/Q420",
             "display_name": "Biology",
             "level": 0,
-            "score": 0.90637624
-        },
-        {
-            "id": "https://openalex.org/C77255625",
-            "wikidata": "https://www.wikidata.org/wiki/Q402093",
-            "display_name": "Reprogramming",
-            "level": 3,
-            "score": 0.65937495
+            "score": 0.9425489
         },
         {
             "id": "https://openalex.org/C121608353",
             "wikidata": "https://www.wikidata.org/wiki/Q12078",
             "display_name": "Cancer",
             "level": 2,
-            "score": 0.626677
-        },
-        {
-            "id": "https://openalex.org/C2780394083",
-            "wikidata": "https://www.wikidata.org/wiki/Q539568",
-            "display_name": "Angiogenesis",
-            "level": 2,
-            "score": 0.5562395
-        },
-        {
-            "id": "https://openalex.org/C178169997",
-            "wikidata": "https://www.wikidata.org/wiki/Q2892636",
-            "display_name": "Genome instability",
-            "level": 4,
-            "score": 0.547929
-        },
-        {
-            "id": "https://openalex.org/C2779013556",
-            "wikidata": "https://www.wikidata.org/wiki/Q181876",
-            "display_name": "Metastasis",
-            "level": 3,
-            "score": 0.5158926
-        },
-        {
-            "id": "https://openalex.org/C8891405",
-            "wikidata": "https://www.wikidata.org/wiki/Q1059",
-            "display_name": "Immune system",
-            "level": 2,
-            "score": 0.5123302
-        },
-        {
-            "id": "https://openalex.org/C96232424",
-            "wikidata": "https://www.wikidata.org/wiki/Q4118072",
-            "display_name": "Cancer cell",
-            "level": 3,
-            "score": 0.5051518
-        },
-        {
-            "id": "https://openalex.org/C2776107976",
-            "wikidata": "https://www.wikidata.org/wiki/Q1786433",
-            "display_name": "Tumor microenvironment",
-            "level": 3,
-            "score": 0.4524901
-        },
-        {
-            "id": "https://openalex.org/C2779134260",
-            "wikidata": "https://www.wikidata.org/wiki/Q12136",
-            "display_name": "Disease",
-            "level": 2,
-            "score": 0.43718606
-        },
-        {
-            "id": "https://openalex.org/C502942594",
-            "wikidata": "https://www.wikidata.org/wiki/Q3421914",
-            "display_name": "Cancer research",
-            "level": 1,
-            "score": 0.41544464
+            "score": 0.68690926
         },
         {
             "id": "https://openalex.org/C70721500",
             "wikidata": "https://www.wikidata.org/wiki/Q177005",
             "display_name": "Computational biology",
             "level": 1,
-            "score": 0.38698018
+            "score": 0.40760097
         },
         {
-            "id": "https://openalex.org/C95444343",
-            "wikidata": "https://www.wikidata.org/wiki/Q7141",
-            "display_name": "Cell biology",
+            "id": "https://openalex.org/C502942594",
+            "wikidata": "https://www.wikidata.org/wiki/Q3421914",
+            "display_name": "Cancer research",
             "level": 1,
-            "score": 0.33247083
-        },
-        {
-            "id": "https://openalex.org/C203014093",
-            "wikidata": "https://www.wikidata.org/wiki/Q101929",
-            "display_name": "Immunology",
-            "level": 1,
-            "score": 0.32597172
-        },
-        {
-            "id": "https://openalex.org/C1491633281",
-            "wikidata": "https://www.wikidata.org/wiki/Q7868",
-            "display_name": "Cell",
-            "level": 2,
-            "score": 0.30645955
+            "score": 0.33881104
         },
         {
             "id": "https://openalex.org/C54355233",
             "wikidata": "https://www.wikidata.org/wiki/Q7162",
             "display_name": "Genetics",
             "level": 1,
-            "score": 0.27654094
-        },
-        {
-            "id": "https://openalex.org/C143425029",
-            "wikidata": "https://www.wikidata.org/wiki/Q5205747",
-            "display_name": "DNA damage",
-            "level": 3,
-            "score": 0.18199676
-        },
-        {
-            "id": "https://openalex.org/C552990157",
-            "wikidata": "https://www.wikidata.org/wiki/Q7430",
-            "display_name": "DNA",
-            "level": 2,
-            "score": 0.0
-        },
-        {
-            "id": "https://openalex.org/C71924100",
-            "wikidata": "https://www.wikidata.org/wiki/Q11190",
-            "display_name": "Medicine",
-            "level": 0,
-            "score": 0.0
-        },
-        {
-            "id": "https://openalex.org/C142724271",
-            "wikidata": "https://www.wikidata.org/wiki/Q7208",
-            "display_name": "Pathology",
-            "level": 1,
-            "score": 0.0
+            "score": 0.32022583
         }
     ],
     "authorships": [
@@ -187,16 +82,6 @@
             },
             "institutions": [
                 {
-                    "id": "https://openalex.org/I180670191",
-                    "display_name": "University of California, San Francisco",
-                    "ror": "https://ror.org/043mz5j54",
-                    "country_code": "US",
-                    "type": "education",
-                    "lineage": [
-                        "https://openalex.org/I180670191"
-                    ]
-                },
-                {
                     "id": "https://openalex.org/I5124864",
                     "display_name": "École Polytechnique Fédérale de Lausanne",
                     "ror": "https://ror.org/02s376052",
@@ -206,13 +91,23 @@
                         "https://openalex.org/I2799323385",
                         "https://openalex.org/I5124864"
                     ]
+                },
+                {
+                    "id": "https://openalex.org/I180670191",
+                    "display_name": "University of California, San Francisco",
+                    "ror": "https://ror.org/043mz5j54",
+                    "country_code": "US",
+                    "type": "education",
+                    "lineage": [
+                        "https://openalex.org/I180670191"
+                    ]
                 }
             ],
             "countries": [
                 "CH",
                 "US"
             ],
-            "is_corresponding": true,
+            "is_corresponding": false,
             "raw_author_name": "Douglas Hanahan",
             "raw_affiliation_strings": [
                 "The Department of Biochemistry & Biophysics, UCSF, San Francisco, CA 94158, USA",
@@ -220,15 +115,15 @@
             ],
             "affiliations": [
                 {
-                    "raw_affiliation_string": "The Department of Biochemistry & Biophysics, UCSF, San Francisco, CA 94158, USA",
-                    "institution_ids": [
-                        "https://openalex.org/I180670191"
-                    ]
-                },
-                {
                     "raw_affiliation_string": "The Swiss Institute for Experimental Cancer Research (ISREC), School of Life Sciences, EPFL, Lausanne CH-1015, Switzerland",
                     "institution_ids": [
                         "https://openalex.org/I5124864"
+                    ]
+                },
+                {
+                    "raw_affiliation_string": "The Department of Biochemistry & Biophysics, UCSF, San Francisco, CA 94158, USA",
+                    "institution_ids": [
+                        "https://openalex.org/I180670191"
                     ]
                 }
             ]
@@ -266,7 +161,7 @@
             "countries": [
                 "US"
             ],
-            "is_corresponding": true,
+            "is_corresponding": false,
             "raw_author_name": "Robert A. Weinberg",
             "raw_affiliation_strings": [
                 "Whitehead Institute for Biomedical Research, Ludwig/MIT Center for Molecular Oncology, and MIT Department of Biology, Cambridge, MA 02142, USA"
@@ -285,7 +180,7 @@
     "best_oa_location": {
         "is_oa": true,
         "landing_page_url": "https://doi.org/10.1016/j.cell.2011.02.013",
-        "pdf_url": "http://www.cell.com/article/S0092867411001279/pdf",
+        "pdf_url": null,
         "source": {
             "id": "https://openalex.org/S110447773",
             "display_name": "Cell",
@@ -315,13 +210,13 @@
         "is_accepted": true,
         "is_published": true
     },
-    "cited_by_count": 57710,
+    "cited_by_count": 58160,
     "doi": "https://doi.org/10.1016/j.cell.2011.02.013",
     "locations": [
         {
             "is_oa": true,
             "landing_page_url": "https://doi.org/10.1016/j.cell.2011.02.013",
-            "pdf_url": "http://www.cell.com/article/S0092867411001279/pdf",
+            "pdf_url": null,
             "source": {
                 "id": "https://openalex.org/S110447773",
                 "display_name": "Cell",
@@ -406,11 +301,6 @@
     ],
     "Keywords": [
         {
-            "id": "https://openalex.org/keywords/reprogramming",
-            "display_name": "Reprogramming",
-            "score": 0.65937495
-        },
-        {
             "id": "https://openalex.org/keywords/cancer-cell-metabolism",
             "display_name": "Cancer Cell Metabolism",
             "score": 0.559701
@@ -436,5 +326,6 @@
             "score": 0.507332
         }
     ],
-    "title": "Hallmarks of Cancer: The Next Generation"
+    "title": "Hallmarks of Cancer: The Next Generation",
+    "abstract": "The hallmarks of cancer comprise six biological capabilities acquired during the multistep development of human tumors. The hallmarks constitute an organizing principle for rationalizing the complexities of neoplastic disease. They include sustaining proliferative signaling, evading growth suppressors, resisting cell death, enabling replicative immortality, inducing angiogenesis, and activating invasion and metastasis. Underlying these hallmarks are genome instability, which generates the genetic diversity that expedites their acquisition, and inflammation, which fosters multiple hallmark functions. Conceptual progress in the last decade has added two emerging hallmarks of potential generality to this list—reprogramming of energy metabolism and evading immune destruction. In addition to cancer cells, tumors exhibit another dimension of complexity: they contain a repertoire of recruited, ostensibly normal cells that contribute to the acquisition of hallmark traits by creating the \"tumor microenvironment.\" Recognition of the widespread applicability of these concepts will increasingly affect the development of new means to treat human cancer."
 }
