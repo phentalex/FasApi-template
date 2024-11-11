@@ -86,6 +86,11 @@ async def get_works(body: Annotated[WorkRequest, Body(
             status_code=400,
             detail=f"Maximum number of IDs exceeded. No more than 50 allowed."
         )
+    if len(body.work_ids) > 50:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Maximum number of IDs exceeded. No more than 50 allowed."
+        )
     results = []
     for id in body.work_ids:
         id = id.upper() if id.lower().startswith("w") else f"W{id}"
@@ -110,6 +115,14 @@ async def get_works(body: Annotated[WorkRequest, Body(
                 "title": data.get("display_name")
             }
             
+            if 'abstract_inverted_index' in data:
+                abstract_inverted_index = data['abstract_inverted_index']
+                abstract_text = await get_abstract_text(abstract_inverted_index)
+            else:
+                abstract_text = "Abstract not found for this work"
+            
+            work_data["abstract"] = abstract_text
+
             if 'abstract_inverted_index' in data:
                 abstract_inverted_index = data['abstract_inverted_index']
                 abstract_text = await get_abstract_text(abstract_inverted_index)
