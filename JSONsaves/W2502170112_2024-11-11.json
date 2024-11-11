@@ -383,7 +383,7 @@
         "is_accepted": false,
         "is_published": false
     },
-    "cited_by_count": 201,
+    "cited_by_count": 202,
     "doi": "https://doi.org/10.1103/physrevb.95.035104",
     "locations": [
         {
@@ -528,5 +528,6 @@
             "score": 0.41695732
         }
     ],
-    "title": "Extremely high <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"><mml:mi>Q</mml:mi></mml:math> -factor metamaterials due to anapole excitation"
+    "title": "Extremely high <mml:math xmlns:mml=\"http://www.w3.org/1998/Math/MathML\"><mml:mi>Q</mml:mi></mml:math> -factor metamaterials due to anapole excitation",
+    "abstract": "We have designed and fabricated a metamaterial consisting of planar metamolecules which exhibit unusual, almost perfect anapole behavior in the sense that the electric dipole radiation is almost canceled by the toroidal dipole one, producing thus an extremely high Q-factor at the resonance frequency. Thus we have demonstrated theoretically and experimentally that metamaterials approaching ideal anapole behavior have very high Q-factor. The size of the system, at the millimeter range, and the parasitic magnetic quadrupole radiation are the factors limiting the size of the Q-factor. In spite of the very low radiation losses the estimated local fields at the metamolecules are extremely high, of the order of {10}^{4} higher than the external incoming field."
 }

@@ -8,3 +8,6 @@ class HellowRequest(BaseModel):
 
 class OpenAlexRequest(BaseModel):
     ids: list[str]
+
+class WorkRequest(BaseModel):
+    work_ids: list[str]
