@@ -1,0 +1,400 @@
+[
+    {
+        "work_id": "W2125435699",
+        "id": "https://openalex.org/W2125435699",
+        "primary_location": {
+            "is_oa": false,
+            "landing_page_url": "https://doi.org/10.1136/bmj.327.7414.557",
+            "pdf_url": null,
+            "source": {
+                "id": "https://openalex.org/S192814187",
+                "display_name": "BMJ",
+                "issn_l": "0959-8138",
+                "issn": [
+                    "0959-8138"
+                ],
+                "is_oa": false,
+                "is_in_doaj": false,
+                "is_core": true,
+                "host_organization": "https://openalex.org/P4310319945",
+                "host_organization_name": "BMJ",
+                "host_organization_lineage": [
+                    "https://openalex.org/P4310319945"
+                ],
+                "host_organization_lineage_names": [
+                    "BMJ"
+                ],
+                "type": "journal"
+            },
+            "license": null,
+            "license_id": null,
+            "version": null,
+            "is_accepted": false,
+            "is_published": false
+        },
+        "type": "review",
+        "publication_year": 2003,
+        "concepts": [
+            {
+                "id": "https://openalex.org/C41008148",
+                "wikidata": "https://www.wikidata.org/wiki/Q21198",
+                "display_name": "Computer science",
+                "level": 0,
+                "score": 0.5832133
+            },
+            {
+                "id": "https://openalex.org/C2522767166",
+                "wikidata": "https://www.wikidata.org/wiki/Q2374463",
+                "display_name": "Data science",
+                "level": 1,
+                "score": 0.5164528
+            },
+            {
+                "id": "https://openalex.org/C23123220",
+                "wikidata": "https://www.wikidata.org/wiki/Q816826",
+                "display_name": "Information retrieval",
+                "level": 1,
+                "score": 0.43524528
+            },
+            {
+                "id": "https://openalex.org/C136764020",
+                "wikidata": "https://www.wikidata.org/wiki/Q466",
+                "display_name": "World Wide Web",
+                "level": 1,
+                "score": 0.35861537
+            }
+        ],
+        "authorships": [
+            {
+                "author_position": "first",
+                "author": {
+                    "id": "https://openalex.org/A5031195893",
+                    "display_name": "Julian P. T. Higgins",
+                    "orcid": "https://orcid.org/0000-0002-8323-2514"
+                },
+                "institutions": [
+                    {
+                        "id": "https://openalex.org/I241749",
+                        "display_name": "University of Cambridge",
+                        "ror": "https://ror.org/013meh722",
+                        "country_code": "GB",
+                        "type": "education",
+                        "lineage": [
+                            "https://openalex.org/I241749"
+                        ]
+                    }
+                ],
+                "countries": [
+                    "GB"
+                ],
+                "is_corresponding": false,
+                "raw_author_name": "Julian P T Higgins",
+                "raw_affiliation_strings": [
+                    "MRC Biostatistics Unit, Institute of Public Health, Cambridge CB2 2SR."
+                ],
+                "affiliations": [
+                    {
+                        "raw_affiliation_string": "MRC Biostatistics Unit, Institute of Public Health, Cambridge CB2 2SR.",
+                        "institution_ids": [
+                            "https://openalex.org/I241749"
+                        ]
+                    }
+                ]
+            },
+            {
+                "author_position": "middle",
+                "author": {
+                    "id": "https://openalex.org/A5007606690",
+                    "display_name": "Simon G. Thompson",
+                    "orcid": "https://orcid.org/0000-0002-5274-7814"
+                },
+                "institutions": [
+                    {
+                        "id": "https://openalex.org/I4210134973",
+                        "display_name": "MRC Biostatistics Unit",
+                        "ror": "https://ror.org/046vje122",
+                        "country_code": "GB",
+                        "type": "facility",
+                        "lineage": [
+                            "https://openalex.org/I241749",
+                            "https://openalex.org/I4210087105",
+                            "https://openalex.org/I4210134973",
+                            "https://openalex.org/I90344618"
+                        ]
+                    }
+                ],
+                "countries": [
+                    "GB"
+                ],
+                "is_corresponding": false,
+                "raw_author_name": "Simon G Thompson",
+                "raw_affiliation_strings": [
+                    "MRC Biostatistics Unit, Institute of Public Health Cambridge United Kingdom"
+                ],
+                "affiliations": [
+                    {
+                        "raw_affiliation_string": "MRC Biostatistics Unit, Institute of Public Health Cambridge United Kingdom",
+                        "institution_ids": [
+                            "https://openalex.org/I4210134973"
+                        ]
+                    }
+                ]
+            },
+            {
+                "author_position": "middle",
+                "author": {
+                    "id": "https://openalex.org/A5009420648",
+                    "display_name": "Jonathan J Deeks",
+                    "orcid": "https://orcid.org/0000-0002-8850-1971"
+                },
+                "institutions": [
+                    {
+                        "id": "https://openalex.org/I2801316944",
+                        "display_name": "Cancer Research UK",
+                        "ror": "https://ror.org/054225q67",
+                        "country_code": "GB",
+                        "type": "nonprofit",
+                        "lineage": [
+                            "https://openalex.org/I2801316944"
+                        ]
+                    }
+                ],
+                "countries": [
+                    "GB"
+                ],
+                "is_corresponding": false,
+                "raw_author_name": "Jonathan J Deeks",
+                "raw_affiliation_strings": [
+                    "Cancer Research UK/NHS Centre for Statistics in Medicine, Institute of Health Sciences, Oxford, United Kingdom"
+                ],
+                "affiliations": [
+                    {
+                        "raw_affiliation_string": "Cancer Research UK/NHS Centre for Statistics in Medicine, Institute of Health Sciences, Oxford, United Kingdom",
+                        "institution_ids": [
+                            "https://openalex.org/I2801316944"
+                        ]
+                    }
+                ]
+            },
+            {
+                "author_position": "last",
+                "author": {
+                    "id": "https://openalex.org/A5042962646",
+                    "display_name": "Douglas G. Altman",
+                    "orcid": "https://orcid.org/0000-0002-7183-4083"
+                },
+                "institutions": [
+                    {
+                        "id": "https://openalex.org/I2801316944",
+                        "display_name": "Cancer Research UK",
+                        "ror": "https://ror.org/054225q67",
+                        "country_code": "GB",
+                        "type": "nonprofit",
+                        "lineage": [
+                            "https://openalex.org/I2801316944"
+                        ]
+                    }
+                ],
+                "countries": [
+                    "GB"
+                ],
+                "is_corresponding": false,
+                "raw_author_name": "Douglas G Altman",
+                "raw_affiliation_strings": [
+                    "Cancer Research UK/NHS Centre for Statistics in Medicine, Institute of Health Sciences, Oxford, United Kingdom"
+                ],
+                "affiliations": [
+                    {
+                        "raw_affiliation_string": "Cancer Research UK/NHS Centre for Statistics in Medicine, Institute of Health Sciences, Oxford, United Kingdom",
+                        "institution_ids": [
+                            "https://openalex.org/I2801316944"
+                        ]
+                    }
+                ]
+            }
+        ],
+        "best_oa_location": {
+            "is_oa": true,
+            "landing_page_url": "https://europepmc.org/articles/pmc192859",
+            "pdf_url": "https://europepmc.org/articles/pmc192859?pdf=render",
+            "source": {
+                "id": "https://openalex.org/S4306400806",
+                "display_name": "Europe PMC (PubMed Central)",
+                "issn_l": null,
+                "issn": null,
+                "is_oa": true,
+                "is_in_doaj": false,
+                "is_core": false,
+                "host_organization": "https://openalex.org/I1303153112",
+                "host_organization_name": "European Bioinformatics Institute",
+                "host_organization_lineage": [
+                    "https://openalex.org/I1303153112"
+                ],
+                "host_organization_lineage_names": [
+                    "European Bioinformatics Institute"
+                ],
+                "type": "repository"
+            },
+            "license": null,
+            "license_id": null,
+            "version": "publishedVersion",
+            "is_accepted": true,
+            "is_published": true
+        },
+        "cited_by_count": 52969,
+        "doi": "https://doi.org/10.1136/bmj.327.7414.557",
+        "locations": [
+            {
+                "is_oa": false,
+                "landing_page_url": "https://doi.org/10.1136/bmj.327.7414.557",
+                "pdf_url": null,
+                "source": {
+                    "id": "https://openalex.org/S192814187",
+                    "display_name": "BMJ",
+                    "issn_l": "0959-8138",
+                    "issn": [
+                        "0959-8138"
+                    ],
+                    "is_oa": false,
+                    "is_in_doaj": false,
+                    "is_core": true,
+                    "host_organization": "https://openalex.org/P4310319945",
+                    "host_organization_name": "BMJ",
+                    "host_organization_lineage": [
+                        "https://openalex.org/P4310319945"
+                    ],
+                    "host_organization_lineage_names": [
+                        "BMJ"
+                    ],
+                    "type": "journal"
+                },
+                "license": null,
+                "license_id": null,
+                "version": null,
+                "is_accepted": false,
+                "is_published": false
+            },
+            {
+                "is_oa": true,
+                "landing_page_url": "https://europepmc.org/articles/pmc192859",
+                "pdf_url": "https://europepmc.org/articles/pmc192859?pdf=render",
+                "source": {
+                    "id": "https://openalex.org/S4306400806",
+                    "display_name": "Europe PMC (PubMed Central)",
+                    "issn_l": null,
+                    "issn": null,
+                    "is_oa": true,
+                    "is_in_doaj": false,
+                    "is_core": false,
+                    "host_organization": "https://openalex.org/I1303153112",
+                    "host_organization_name": "European Bioinformatics Institute",
+                    "host_organization_lineage": [
+                        "https://openalex.org/I1303153112"
+                    ],
+                    "host_organization_lineage_names": [
+                        "European Bioinformatics Institute"
+                    ],
+                    "type": "repository"
+                },
+                "license": null,
+                "license_id": null,
+                "version": "publishedVersion",
+                "is_accepted": true,
+                "is_published": true
+            },
+            {
+                "is_oa": true,
+                "landing_page_url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC192859",
+                "pdf_url": null,
+                "source": {
+                    "id": "https://openalex.org/S2764455111",
+                    "display_name": "PubMed Central",
+                    "issn_l": null,
+                    "issn": null,
+                    "is_oa": true,
+                    "is_in_doaj": false,
+                    "is_core": false,
+                    "host_organization": "https://openalex.org/I1299303238",
+                    "host_organization_name": "National Institutes of Health",
+                    "host_organization_lineage": [
+                        "https://openalex.org/I1299303238"
+                    ],
+                    "host_organization_lineage_names": [
+                        "National Institutes of Health"
+                    ],
+                    "type": "repository"
+                },
+                "license": null,
+                "license_id": null,
+                "version": "publishedVersion",
+                "is_accepted": true,
+                "is_published": true
+            },
+            {
+                "is_oa": true,
+                "landing_page_url": "http://eprints.lincoln.ac.uk/id/eprint/1932/1/MetaAnalysisPaper.pdf",
+                "pdf_url": "http://eprints.lincoln.ac.uk/id/eprint/1932/1/MetaAnalysisPaper.pdf",
+                "source": {
+                    "id": "https://openalex.org/S4377196275",
+                    "display_name": "Lincoln Repository (University of Lincoln)",
+                    "issn_l": null,
+                    "issn": null,
+                    "is_oa": false,
+                    "is_in_doaj": false,
+                    "is_core": false,
+                    "host_organization": "https://openalex.org/I51532219",
+                    "host_organization_name": "University of Lincoln",
+                    "host_organization_lineage": [
+                        "https://openalex.org/I51532219"
+                    ],
+                    "host_organization_lineage_names": [
+                        "University of Lincoln"
+                    ],
+                    "type": "repository"
+                },
+                "license": null,
+                "license_id": null,
+                "version": "acceptedVersion",
+                "is_accepted": true,
+                "is_published": false
+            },
+            {
+                "is_oa": false,
+                "landing_page_url": "https://pubmed.ncbi.nlm.nih.gov/12958120",
+                "pdf_url": null,
+                "source": {
+                    "id": "https://openalex.org/S4306525036",
+                    "display_name": "PubMed",
+                    "issn_l": null,
+                    "issn": null,
+                    "is_oa": false,
+                    "is_in_doaj": false,
+                    "is_core": false,
+                    "host_organization": "https://openalex.org/I1299303238",
+                    "host_organization_name": "National Institutes of Health",
+                    "host_organization_lineage": [
+                        "https://openalex.org/I1299303238"
+                    ],
+                    "host_organization_lineage_names": [
+                        "National Institutes of Health"
+                    ],
+                    "type": "repository"
+                },
+                "license": null,
+                "license_id": null,
+                "version": null,
+                "is_accepted": false,
+                "is_published": false
+            }
+        ],
+        "Keywords": [
+            {
+                "id": "https://openalex.org/keywords/quality-assessment",
+                "display_name": "Quality Assessment",
+                "score": 0.495691
+            }
+        ],
+        "title": "Measuring inconsistency in meta-analyses",
+        "abstract": "Cochrane Reviews have recently started including the quantity I 2 to help readers assess the consistency of the results of studies in meta-analyses. What does this new quantity mean, and why is assessment of heterogeneity so important to clinical practice? \n\nSystematic reviews and meta-analyses can provide convincing and reliable evidence relevant to many aspects of medicine and health care.1 Their value is especially clear when the results of the studies they include show clinically important effects of similar magnitude. However, the conclusions are less clear when the included studies have differing results. In an attempt to establish whether studies are consistent, reports of meta-analyses commonly present a statistical test of heterogeneity. The test seeks to determine whether there are genuine differences underlying the results of the studies (heterogeneity), or whether the variation in findings is compatible with chance alone (homogeneity). However, the test is susceptible to the number of trials included in the meta-analysis. We have developed a new quantity, I 2, which we believe gives a better measure of the consistency between trials in a meta-analysis.\n\nAssessment of the consistency of effects across studies is an essential part of meta-analysis. Unless we know how consistent the results of studies are, we cannot determine the generalisability of the findings of the meta-analysis. Indeed, several hierarchical systems for grading evidence state that the results of studies must be consistent or homogeneous to obtain the highest grading.2–4\n\nTests for heterogeneity are commonly used to decide on methods for combining studies and for concluding consistency or inconsistency of findings.5 6 But what does the test achieve in practice, and how should the resulting P values be interpreted?\n\nA test for heterogeneity examines the null hypothesis that all studies are evaluating the same effect. The usual test statistic …"
+    }
+]
