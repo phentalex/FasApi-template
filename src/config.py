@@ -1,10 +1,12 @@
 import logging
 import os
 import asyncio
+from typing import List
 from pathlib import Path
 from fastapi import HTTPException
 from dotenv import load_dotenv
 import httpx, csv, json, re
+import aiohttp
 from datetime import datetime
 
 load_dotenv()
@@ -19,8 +21,113 @@ CSV_SAVE_PATH = "./CSVsaves"
 
 MAX_FILE_SIZE = 100 * 1024 * 1024
 MAX_ROWS = 100000
+API_URL = "https://api.openalex.org/works"
 PROGRESS_FILE = "progress.json"
 STOP_FLAG = "stop.flag"
+PROCESSED_CSV = "works.csv"
+
+async def parse_works_2(batch_size: int):
+    progress = load_progress()
+    cursor = progress.get("cursor", "*")
+    
+    while cursor:
+        if Path(STOP_FLAG).exists():
+            logger.info("Parsing stopped by user.")
+            break
+        
+        # Получение списка ID работ
+        try:
+            response = await fetch_json(f"{OPENALEX_API_URL}/works?select=id&per-page=200&cursor={cursor}")
+            works = response.get("results", [])
+            next_cursor = response.get("meta", {}).get("next_cursor")
+        except Exception as e:
+            logger.error(f"Error fetching works: {e}")
+            break
+
+        for work in works:
+            try:
+                work_id = work["id"].split("/")[-1]
+                id = work["id"]
+                data = await fetch_json(f"{OPENALEX_API_URL}/works/{work_id}")
+
+                raw_title = data.get("display_name", "")
+                if raw_title is None:
+                    cleaned_title = "Untitled"
+                else:
+                    cleaned_title = re.sub(r'<[^>]+>', '', raw_title)
+
+                work_data = {
+                "id": id,
+                "primary_location": data.get("primary_location"),
+                "type": data.get("type"),
+                "publication_year": data.get("publication_year"),
+                "concepts": data.get("concepts"),
+                "authorships": data.get("authorships"),
+                "best_oa_location": data.get("best_oa_location"),
+                "cited_by_count": data.get("cited_by_count"),
+                "doi": data.get("doi"),
+                "locations": data.get("locations"),
+                "Keywords": data.get("keywords"),
+                "title": cleaned_title
+                }
+                if 'abstract_inverted_index' in data:
+                    abstract_inverted_index = data['abstract_inverted_index']
+                    abstract_text = await get_abstract_text(abstract_inverted_index)
+                else:
+                    abstract_text = "Abstract not found for this work"
+                work_data["abstract"] = abstract_text
+
+                append_to_json(work_data, work_id)
+                append_to_csv(work_data, work_id)
+            except Exception as e:
+                logger.error(f"Error processing work ID {work_id}: {e}")
+        
+        # Сохранение прогресса
+        progress["cursor"] = next_cursor
+        save_progress(progress)
+
+        if not next_cursor:
+            logger.info("Parsing completed.")
+            break
+
+# Функция для получения JSON данных
+async def fetch_json(url: str):
+    import aiohttp
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as response:
+            return await response.json()
+
+# Глобальный прогресс
+progress = {
+    "cursor": "*",  # Начальный курсор
+    "processed_count": 0
+}
+
+
+logging.basicConfig(
+    filename="parser.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+)
+logger = logging.getLogger(__name__)
+
+# Функция для сохранения прогресса
+def save_progress(progress: dict):
+    with open(PROGRESS_FILE, "w") as f:
+        json.dump(progress, f)
+
+# Функция для загрузки прогресса
+def load_progress():
+    if Path(PROGRESS_FILE).exists():
+        with open(PROGRESS_FILE, "r") as f:
+            return json.load(f)
+    return {"cursor": "*"}
+
+def read_ids_from_csv(file_path):
+    with open(file_path, "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        return [row["id"] for row in reader]
 
 def reset_stop_flag():
     if Path(STOP_FLAG).exists():
@@ -68,9 +175,6 @@ def count_entries_in_json(file_path):
 def append_to_json(data, work_id):
     if not os.path.exists(JSON_SAVE_PATH):
         os.makedirs(JSON_SAVE_PATH)
-
-    if not str(work_id).startswith('W'):
-        work_id = f'W{work_id}'
 
     last_file = get_last_json_file()
     if last_file:
@@ -126,9 +230,7 @@ def append_to_csv(data, work_id):
     if not os.path.exists(CSV_SAVE_PATH):
         os.makedirs(CSV_SAVE_PATH)
 
-    if not str(work_id).startswith('W'):
-        work_id = f'W{work_id}'
-
+    # Получить последний CSV файл или создать новый
     last_file = get_latest_csv_file()
     if last_file:
         file_size = os.path.getsize(last_file)
@@ -145,19 +247,22 @@ def append_to_csv(data, work_id):
             index += 1
         last_file = new_file
 
+    # Проверить, существует ли файл
     file_exists = os.path.isfile(last_file)
+
+    # Если файл существует, проверить наличие записи
     if file_exists:
         with open(last_file, 'r', newline='', encoding='utf-8') as csv_file:
-            reader = csv.reader(csv_file)
-            if any(row[0] == work_id for row in reader):
-                return 
+            reader = csv.DictReader(csv_file)
+            if any(row["work_id"] == work_id for row in reader):  # Убедиться, что ключи совпадают
+                return
 
+    # Открыть файл для записи
     with open(last_file, 'a', newline='', encoding='utf-8') as csv_file:
-        writer = csv.writer(csv_file)
+        writer = csv.DictWriter(csv_file, fieldnames=['work_id', *data.keys()])
         if not file_exists:
-            writer.writerow(['work_id', *data.keys()]) 
-        writer.writerow([work_id, *data.values()])
-
+            writer.writeheader()  # Записать заголовки только для нового файла
+        writer.writerow({"work_id": work_id, **data})
 
 async def fetch_json(url: str):
     async with httpx.AsyncClient() as client:
@@ -232,20 +337,6 @@ async def fetch_work_data(work_id):
     except Exception as e:
         return {"error": f"Error for {work_id}: {str(e)}"}
 
-
-async def fetch_and_save(ids_batch, batch_index):
-    if not work_id.startswith('W'):
-        work_id = f'W{work_id}'
-    tasks = [fetch_work_data(work_id) for work_id in ids_batch]
-    results = await asyncio.gather(*tasks)
-
-    for work_data in results:
-        if "error" not in work_data:
-            append_to_json(work_data, work_data["id"])
-            append_to_csv(work_data, work_data["id"])
-
-    print(f"Batch {batch_index} saved. Total works: {len(results)}")
-
 async def parse_works(start_id, end_id, batch_size):
     progress = load_progress()
     processed_ids = progress.get("processed_ids", [])
@@ -260,7 +351,7 @@ async def parse_works(start_id, end_id, batch_size):
         batch_ids = range(current_id, min(current_id + batch_size, end_id + 1))
         for work_id in batch_ids:
             try:
-                data = await fetch_json(f"{OPENALEX_API_URL}/works/W{work_id}")
+                data = await fetch_json(f"{OPENALEX_API_URL}/works/{work_id}")
 
                 raw_title = data.get("display_name", "")
                 if raw_title is None:
@@ -289,8 +380,8 @@ async def parse_works(start_id, end_id, batch_size):
                     abstract_text = "Abstract not found for this work"
                 work_data["abstract"] = abstract_text
 
-                append_to_csv(work_data, work_id)
-                append_to_json(work_data, work_id)
+                append_to_csv(work_data)
+                append_to_json(work_data)
 
                 processed_ids.append(work_id)
             except Exception as e:
@@ -359,5 +450,11 @@ def update_progress(start_id, current_id, end_id, batch_size):
     with open(PROGRESS_FILE, "w") as f:
         json.dump(progress_data, f, indent=4)
 
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(message)s")
-logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    handlers=[
+        logging.FileHandler("parser.json"),  # Сохраняет логи в файл
+        logging.StreamHandler()  # Отображает логи в консоли
+    ]
+)

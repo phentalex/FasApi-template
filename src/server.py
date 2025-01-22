@@ -1,12 +1,13 @@
 from typing import Annotated, List
 import httpx, re, uvicorn
 from pathlib import Path
+import asyncio
 from fastapi import FastAPI, HTTPException, Body, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.config import logger, public_or_local
 from src.models.valid_type_request import HellowRequest, OpenAlexRequest, WorkRequest
-from config import append_to_json, append_to_csv, fetch_json, get_abstract_text, parse_works, read_progress, update_progress, reset_stop_flag
+from config import append_to_json, append_to_csv, fetch_json, get_abstract_text, parse_works, read_progress, update_progress, reset_stop_flag, parse_works_2
 from config import OPENALEX_API_URL, STOP_FLAG
 
 if public_or_local == 'LOCAL':
@@ -90,6 +91,21 @@ async def get_works(body: Annotated[WorkRequest, Body(
             results.append({"error": f"Internal server error: {str(e)}"})
 
     return results
+
+@app.post("/start_parser")
+async def start_parser(background_tasks: BackgroundTasks, batch_size: int):
+    if Path(STOP_FLAG).exists():
+        Path(STOP_FLAG).unlink()  # Удаление флага остановки, если он есть
+    background_tasks.add_task(parse_works_2, batch_size)
+    logger.info("Parsing started.")
+    return {"status": "Parsing started"}
+
+@app.post("/stop_parser")
+async def stop_parser():
+    Path(STOP_FLAG).write_text("")  # Создание файла-флага
+    logger.info("Stop flag set.")
+    return {"status": "Parsing will stop soon."}
+
 
 @app.post("/start_parsing/")
 async def start_parsing(start_id: int, end_id: int, batch_size: int, background_tasks: BackgroundTasks):
