@@ -11,3 +11,6 @@ class OpenAlexRequest(BaseModel):
 
 class WorkRequest(BaseModel):
     work_ids: list[str]
+
+class WorkIDs(BaseModel):
+    ids: list[str]

@@ -1,12 +1,13 @@
 from typing import Annotated, List
 import httpx, re, uvicorn
-from pydantic import BaseModel
-from fastapi import FastAPI, HTTPException, Body
+from pathlib import Path
+from fastapi import FastAPI, HTTPException, Body, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 
 from src.config import logger, public_or_local
 from src.models.valid_type_request import HellowRequest, OpenAlexRequest, WorkRequest
-from config import append_to_json, append_to_csv, fetch_json, get_abstract_text, OPENALEX_API_URL
+from config import append_to_json, append_to_csv, fetch_json, get_abstract_text, parse_works, read_progress, update_progress, reset_stop_flag
+from config import OPENALEX_API_URL, STOP_FLAG
 
 if public_or_local == 'LOCAL':
     url = 'http://localhost'
@@ -71,13 +72,11 @@ async def get_works(body: Annotated[WorkRequest, Body(
                 "Keywords": data.get("keywords"),
                 "title": cleaned_title
             }
-            ##
             if 'abstract_inverted_index' in data:
                 abstract_inverted_index = data['abstract_inverted_index']
                 abstract_text = await get_abstract_text(abstract_inverted_index)
             else:
                 abstract_text = "Abstract not found for this work"
-            ##
             work_data["abstract"] = abstract_text
 
             append_to_json(work_data, id)
@@ -91,6 +90,50 @@ async def get_works(body: Annotated[WorkRequest, Body(
             results.append({"error": f"Internal server error: {str(e)}"})
 
     return results
+
+@app.post("/start_parsing/")
+async def start_parsing(start_id: int, end_id: int, batch_size: int, background_tasks: BackgroundTasks):
+    """
+    Эндпоинт для запуска процесса парсинга.
+    """
+    if Path(STOP_FLAG).exists():
+        Path(STOP_FLAG).unlink()
+    
+    background_tasks.add_task(parse_works, start_id, end_id, batch_size)
+    update_progress(start_id, start_id, end_id, batch_size)
+    print(f'Parsing started. "start_id": {start_id}, "end_id": {end_id}, "batch_size": {batch_size}')
+    return {"message": "Parsing started.", "start_id": start_id, "end_id": end_id, "batch_size": batch_size}
+
+@app.post("/continue_parsing/")
+async def continue_parsing(background_tasks: BackgroundTasks):
+    """
+    Эндпоинт для продолжения парсинга.
+    """
+    progress = read_progress()
+    if not progress:
+        raise HTTPException(status_code=400, detail="No progress found. Please start parsing first.")
+
+    start_id = progress["start_id"]
+    current_id = progress["current_id"]
+    end_id = progress["end_id"]
+    batch_size = progress["batch_size"]
+
+    reset_stop_flag()
+
+    background_tasks.add_task(parse_works, current_id, end_id, batch_size)
+    return {"message": f"Parsing will continue from ID {current_id}.", "current_id": current_id, "end_id": end_id, "batch_size": batch_size}
+
+
+@app.post("/stop_parsing/")
+async def stop_parsing():
+    try:
+        with open(STOP_FLAG, "w") as stop_file:
+            stop_file.write("stop")
+        return {"message": "Parsing will stop after the current batch."}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to create stop flag: {str(e)}")
+
+
 
 @app.get("/")
 async def read_root():
